@@ -146,7 +146,7 @@ Like a user
 12. Power User Access allows ________.
 - [ ] Full Access to all AWS services and resources.
 - [ ] Read-only access to all AWS services and resources.
-- [ ] Read-only access to all AWS services and resources.
+- [ ] Access to all AWS services except the management of groups and users within IAM.
 - [ ] Users to inspect the source code of the AWS platform.
 
 13. You are a solutions architect working for a large engineering company that are moving from a legacy infrastructure to AWS. You have configured the company's first AWS account and you have set up IAM. Your company is based in Andorra, but there will be a small subsidiary operating out of South Korea, so that office will need its own AWS environment. Which of the following statements is true?
@@ -182,68 +182,37 @@ Like a user
 <p>1. What is an additional way to secure the AWS accounts of both the root account and new users alike?</p>
 <p>Implement Multi-Factor Authentication for all accounts.</p>
 <p>2. Which of the following is not a component of IAM?</p>
-</p>Organizational Units</p>
-</p>3. When you create a new user, that user ________.</p>
-</p>Will be able to interact with AWS using their access key ID and secret access key using the API, CLI, or the AWS SDKs</p>
-</p>4. Which statement best describes IAM?</p>
-- [ ] IAM allows you to manage users, groups, roles, and their corresponding level of access to the AWS Platform.
-- [ ] IAM allows you to manage users' passwords only. AWS staff must create new users for your organization. This is done by raising a ticket.
-- [ ] IAM allows you to manage permissions for AWS resources only.
-- [ ] IAM stands for Improvised Application Management, and it allows you to deploy and manage applications in the AWS Cloud.
-</p>5. Using SAML (Security Assertion Markup Language 2.0), you can give your federated users single sign-on (SSO) access to the AWS Management Console.
-- [ ] True
-- [ ] False
-</p>6. In what language are policy documents written?</p>
-</p>JSON</p>
-</p>7. What is the default level of access a newly created IAM User is granted?</p>
-</p>No access to any AWS services</p>
-</p>8. Which of the following is not a feature of IAM?</p>
-</p>IAM allows you to set up biometric authentication, so that no password are required</p>
-</p>9. You have a client who is considering a move to AWS. In establishing a new account, what is the first thing the company should do?
-</p>Set up an account using their company email address</p>
-</p>10. A new employee has just started work, and it is your job to give her administrator access to the AWS console. You have given her a user name, an access key ID, a secret access key, and you have generated a password for her. She is now able to log in to the AWS console, but she is unable to interact with any AWS services. What should you do next?
-</p>Grant her Administrator access by adding her to the Administrators' group.</p>
-
-11. What level of access does the "root" account have?
-- [ ] Read-only access
-- [ ] Power User Access
-- [ ] Administrator Access
-- [ ] No access
-
-12. Power User Access allows ________.
-- [ ] Full Access to all AWS services and resources.
-- [ ] Read-only access to all AWS services and resources.
-- [ ] Read-only access to all AWS services and resources.
-- [ ] Users to inspect the source code of the AWS platform.
-
-13. You are a solutions architect working for a large engineering company that are moving from a legacy infrastructure to AWS. You have configured the company's first AWS account and you have set up IAM. Your company is based in Andorra, but there will be a small subsidiary operating out of South Korea, so that office will need its own AWS environment. Which of the following statements is true?
-- [ ] You will then need to configure Users and Policy Documents for each region, respectively.
-- [ ] You will need to configure Users and Policy Documents only once, as these are applied globally.
-- [ ] You will need to configure your users regionally, however your policy documents are global.
-- [ ] You will need to configure your policy documents regionally, however your users are global.
-
-14. You are a security administrator working for a hotel chain. You have a new member of staff who has started as a systems administrator, and she will need full access to the AWS console. You have created the user account and generated the access key id and the secret access key. You have moved this user into the group where the other administrators are, and you have provided the new user with their secret access key and their access key id. However, when she tries to log in to the AWS console, she cannot. Why might that be?
-- [ ] You have not applied the "log in from console" policy document to the user. You must apply this first so that they can log in.
-- [ ] Your user is trying to log in from the AWS console from outside the corporate network. This is not possible.
-- [ ] You have not yet activated multi-factor authentication for the user, so by default they will not be able to log in.
-- [ ] You cannot log in to the AWS console using the Access Key ID / Secret Access Key pair. Instead, you must generate a password for the user, and supply the user with this password and your organization's unique AWS console login URL.
-
-15. Every user you create in the IAM systems starts with ________.
-- [ ] Full Permissions
-- [ ] Partial Permissions
-- [ ] No Permissions
-
-16. A __________ is a document that provides a formal statement of one or more permissions.
-- [ ] Policy
-- [ ] User
-- [ ] Group
-- [ ] Role
-
-17. You have created a new AWS account for your company, and you have also configured multi-factor authentication on the root account. You are about to create your new users. What strategy should you consider in order to ensure that there is good security on this account.
-- [ ] Enact a strong password policy: user passwords must be changed every 45 days, with each password containing a combination of capital letters, lower case letters, numbers, and special symbols.
-- [ ] Require users only to be able to log in using biometric authentication.
-- [ ] Restrict login to the corporate network only.
-- [ ] Give all users the same password so that if they forget their password they can just ask their co-workers.</p>
+<p>Organizational Units</p>
+<p>3. When you create a new user, that user ________.</p>
+<p>Will be able to interact with AWS using their access key ID and secret access key using the API, CLI, or the AWS SDKs</p>
+<p>4. Which statement best describes IAM?</p>
+<p>IAM allows you to manage users, groups, roles, and their corresponding level of access to the AWS Platform.</p>
+<p>5. Using SAML (Security Assertion Markup Language 2.0), you can give your federated users single sign-on (SSO) access to the AWS Management Console.</p>
+<p>True</p>
+<p>6. In what language are policy documents written?</p>
+<p>JSON</p>
+<p>7. What is the default level of access a newly created IAM User is granted?</p>
+<p>No access to any AWS services</p>
+<p>8. Which of the following is not a feature of IAM?</p>
+<p>IAM allows you to set up biometric authentication, so that no password are required</p>
+<p>9. You have a client who is considering a move to AWS. In establishing a new account, what is the first thing the company should do?</p>
+<p>Set up an account using their company email address</p>
+<p>10. A new employee has just started work, and it is your job to give her administrator access to the AWS console. You have given her a user name, an access key ID, a secret access key, and you have generated a password for her. She is now able to log in to the AWS console, but she is unable to interact with any AWS services. What should you do next?</p>
+<p>Grant her Administrator access by adding her to the Administrators' group.</p>
+<p>11. What level of access does the "root" account have?</p>
+<p>Administrator Access</p>
+<p>12. Power User Access allows ________.</p>
+<p>Access to all AWS services except the management of groups and users within IAM.</p>
+<p>13. You are a solutions architect working for a large engineering company that are moving from a legacy infrastructure to AWS. You have configured the company's first AWS account and you have set up IAM. Your company is based in Andorra, but there will be a small subsidiary operating out of South Korea, so that office will need its own AWS environment. Which of the following statements is true?</p>
+<p>You will need to configure Users and Policy Documents only once, as these are applied globally.</p>
+<p>14. You are a security administrator working for a hotel chain. You have a new member of staff who has started as a systems administrator, and she will need full access to the AWS console. You have created the user account and generated the access key id and the secret access key. You have moved this user into the group where the other administrators are, and you have provided the new user with their secret access key and their access key id. However, when she tries to log in to the AWS console, she cannot. Why might that be?</p>
+<p>You cannot log in to the AWS console using the Access Key ID / Secret Access Key pair. Instead, you must generate a password for the user, and supply the user with this password and your organization's unique AWS console login URL.</p>
+<p>15. Every user you create in the IAM systems starts with ________.</p>
+<p>No Permissions</p>
+<p>16. A __________ is a document that provides a formal statement of one or more permissions.</p>
+<p>Policy</p>
+<p>17. You have created a new AWS account for your company, and you have also configured multi-factor authentication on the root account. You are about to create your new users. What strategy should you consider in order to ensure that there is good security on this account.</p>
+<p>Enact a strong password policy: user passwords must be changed every 45 days, with each password containing a combination of capital letters, lower case letters, numbers, and special symbols.</p>
 </details>
 
 ## Identity Access Management Quiz (Developer)
