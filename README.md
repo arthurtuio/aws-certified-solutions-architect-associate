@@ -1,6 +1,6 @@
 # aws-certified-solutions-architect-associate
 
-Anotações do [Curso AWS Certified Solutions Architect Associate](https://www.udemy.com/course/aws-certified-solutions-architect-associate/)
+Study notes of [AWS Certified Solutions Architect Associate Course](https://www.udemy.com/course/aws-certified-solutions-architect-associate/)
 
 ## Exam
 
