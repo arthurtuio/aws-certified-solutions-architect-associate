@@ -27,3 +27,16 @@ Andy Jassy : "Invention requires two thins 1. the ability to try a lot of experi
 
 ## AWS Console
 
+![image](/aws-certified-solutions-architect-associate/aws-services.webp)
+
+### Availability Zones (1+DataCenter)
+
+One or more Data Centers close to each other
+
+### Regions
+
+Groups Availability zones close to each other
+
+#### Edge Locations (Chaging Content)
+
+Endpoints for AWS which are used for caching content. Typically this consists of CloudFront, Amazon's Content Delivery Network (CDN). Always more Edge Locations then Regions.
