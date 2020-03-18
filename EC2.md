@@ -1,8 +1,26 @@
 # EC2
 
-EC2 = Elastic Compute Cloud, fornece máquinas virtuais, com a possibilidade de redimensionar a capacidade computacional livremente.
-Reduz o tempo para ligar e reiniciar as máquinas em minutos.
-Paga somente pela capacidade que utilizar
+Amazon Elastic Compute Cloud is a wer service that provides resizable compute capacity in the cloud. Amazon EC2 reduces the time required to obtain and boot new server instances to minut4es, allowing you quickly scale capacity, both up and down, as your computinf requirements change.
+
+## Pricing Models
+
+### On Demandd
+
+Allows tou pay a fixed rate by the hour (or by second) with no commitment.
+
+#### Good for
+
+- Users that want the low cost and flexibility of Amazon EC2 without any up-front payment of long-term commitment
+- Applications with short term, spiky, or unpredictable workloads that cannot be interrupted
+- Applications being
+
+### Reserved
+
+Provides you with a capacity reservation, and offer a significant discount on the hourly charge for an instance. Contract Terms are 1 ou 3 Year Terms.
+
+### Dedicated Host
+
+Physical EC2 server dedicated for your use. Dedicated Hosts can help you reduce costs by allowing you to use your existing server-bound sotfware licenses.
 
 Opções de assinatura:
 
