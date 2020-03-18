@@ -8,41 +8,50 @@ Amazon Elastic Compute Cloud is a wer service that provides resizable compute ca
 
 Allows tou pay a fixed rate by the hour (or by second) with no commitment.
 
-#### Good for
+#### Useful for
 
 - Users that want the low cost and flexibility of Amazon EC2 without any up-front payment of long-term commitment
 - Applications with short term, spiky, or unpredictable workloads that cannot be interrupted
-- Applications being
+- Applications being developed or tested on AWS EC2 for the first time.
 
 ### Reserved
 
 Provides you with a capacity reservation, and offer a significant discount on the hourly charge for an instance. Contract Terms are 1 ou 3 Year Terms.
 
+#### Reserved Price Types
+
+- Standard Reserved Instances: these offer up to 75% off on demand instances. The more you pay up front and the longer the contract, the greater the disconunt
+- Comvertible Reserved Instances: these offer up to 54% off on demand capability to change the attributes od RI as long as the exchange result in the creation of Reserved Instances of Equeal or Greater Value.
+- Scheduled Reserved Instances: these are available to lanch within the time windows you reserve. This option allows you to match your capacity reservation to a predictable recurriing schedule that only requires a fraction of day, a week, or a month.
+
+#### Useful for
+
+- Applications with steady steady state or predictable usage
+- Applications that reserver capacity
+- Users able to make upfront payments to reduce their total computins costs even further
+
+### Spot
+
+Enables you to bid whatever price you want for instance capacity, providing for even greates savings if your applications have flexible start and end times.
+
+#### Useful for
+
+- Applications that have flexible star and end times.
+- Applications that are only feasible at very low compute prices
+- Users with urgent computing needs for large amounts of additional capacity
+
 ### Dedicated Host
 
 Physical EC2 server dedicated for your use. Dedicated Hosts can help you reduce costs by allowing you to use your existing server-bound sotfware licenses.
 
-Opções de assinatura:
+#### Useful for
 
-- Por demanda: permite pagar uma taxa fixa por hora ou até mesmo por segundo, dependendo do S.O escolhido para a instância:
-Linux: paga por segundo, Windows: por hora, mas é esperado que mude este modelo de pagamento.
-Bom para usuários que desejam baixo custo e flexibilidade, sem ter que pagar adiantado ou assumir compromissos de longo prazo.
-Aplicações em desenvolvimento ou testados na AWS pela primeira vez.
+- Regulatory requirements that may not support multi-tenant virtualization
+- Great for licensing which does not suporte multi-tetancy or cloud deployments
+- Can be purchased On-Demand (hourly)
 
-- Por reserva: você faz um contrato de 1 ou 3 anos, paga adiantado um parte ou o total do contrato e ganha um considerável desconto pela
-hora cobrada da instância.
-Bom para aplicações já estáveis, com usabilidade previsível.
-Reserved instances agendadas para serem utilizadas num determinado período que você configurar, essa opção permite combinar a capacidade da
-máquina com momentos de utilização previsível que só requer parte de um dia, semana ou mês.
+## Security Groups
 
-- Spot: permite oferecer qualquer valor pela capacidade computacional da instância, gerando ainda mais descontos caso a sua aplicação
-tenha horários flexíveis para ligar e desligar.
-
-- Host dedicado: é um servidor EC2 físico, dedicado e ele pode ajudar a reduzir custos, permitindo você utilizar suas licenças
-já existentes, por exemplo: VM Ware, Oracle, SQL Server entre outros.
-Vantajoso para requirementos regulatórios que não permitem virtualização multi-tenant ( https://www.treinaweb.com.br/blog/o-que-e-uma-aplicacao-multitenant/ ).
-Pode ser comprado por demanda, pagando por hora.
-Pode ser comprado por reserva, até 70% mais barato que por demanda.
 
 EBS = Elastic Block Storage
 Permite criar volumes de armazenamento e anexá-los em instâncias EC2.
