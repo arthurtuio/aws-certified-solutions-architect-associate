@@ -68,8 +68,49 @@ EBS = Elastic Block Storage
 Permite criar volumes de armazenamento e anexá-los em instâncias EC2.
 EBS volumes são colocados em áreas disponíveis específicas, onde são automáticamente replicadas para proteger de falhas de um único componente.
 
+## Elastic Block Store (EBS)
 
+Provides persistent block storage volumes for use with EC2 instances in the Cloud. EBS volume is automatically replicated within its availability Zone to protect you from component failure, offering high availability and durability.
 
+### Gerenal Purpose (SSD)
+
+- Description: general pu
+- Use Case:
+- API Name:
+- Volume Size:
+- Max IOPS/Volume:
+
+### Provisioned IOPS (SSD)
+
+- Description:
+- Use Case:
+- API Name:
+- Volume Size:
+- Max IOPS/Volume:
+
+### Throughput Optimised Hard Disk Drive (HDD)
+
+- Description:
+- Use Case:
+- API Name:
+- Volume Size:
+- Max IOPS/Volume:
+
+### Cold Hard Disk Drive (HDD)
+
+- Description:
+- Use Case:
+- API Name:
+- Volume Size:
+- Max IOPS/Volume:
+
+### Magnetic (HDD)
+
+- Description:
+- Use Case:
+- API Name:
+- Volume Size:
+- Max IOPS/Volume:
 
 Tipos de volume EBS:
 
