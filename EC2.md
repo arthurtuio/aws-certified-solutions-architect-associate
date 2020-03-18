@@ -52,6 +52,17 @@ Physical EC2 server dedicated for your use. Dedicated Hosts can help you reduce 
 
 ## Security Groups
 
+A security group acts as a virtual firewall that controls the traffic for one or more instances.
+
+- All Indound traffic is blocked by default
+- All outbound traffic is allowed
+- If you create an indound rule allowing traffic in, that traffic is automatically allowed back out again.
+- Changes to security groups take effect immediately
+- You can have any number of EC2 instances within a security  group
+- You can have multiple security groups attached to EC2 Instances
+- You can specity allow rules, but not deny rules
+- Security Groups are STATEFUL
+- Uou cannot block specific IP addresses using Security Groups, instead use Network Access Control Lists.
 
 EBS = Elastic Block Storage
 Permite criar volumes de armazenamento e anexá-los em instâncias EC2.
