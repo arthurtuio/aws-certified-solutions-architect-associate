@@ -72,7 +72,26 @@ EBS volumes são colocados em áreas disponíveis específicas, onde são autom�
 
 Provides persistent block storage volumes for use with EC2 instances in the Cloud. EBS volume is automatically replicated within its availability Zone to protect you from component failure, offering high availability and durability.
 
-### Gerenal Purpose (SSD)
+- Volumes exist on EBS. Think of EBS as virtual hard disk.
+- Snapshots exist on S3. Think of snapshots as a photograph of the disk ( the first cration takes time)
+- Snapshots are incremental - this means that only the blocks that have changed since your last snapshot are moved to S3.
+- To create a snapshot for Amazon EBS volumes that serve as root devices, you should stop the instance before taking the snapshot(However you can take a snap while the instance is running)
+- You can created AMI's from snapshots
+- You can change EBS volumes sizes on the fly, including changing the size and storage type.
+- Volumes will ALWAYS be in the same availability zone as the EC2 instance.
+- To move an EC2 volume from one AZ to another:
+  1. Take a snapshot of it
+  2. Create an AMI from the snapshot
+  3. Then use the AMI to launch the instance in a new AZ.
+- To Move as EC2 volume from one region to another:
+  1. Take a snapshot of it
+  2. Create an AMI from the snapshot
+  3. Then copy the AMI from one region to the other.
+  4. Then use the copied AMI to launch the new EC2 instance in the new region
+
+### EBS Types
+
+#### Gerenal Purpose (SSD)
 
 - Description: general purpose SSd volume that balances price and performance for a wide variety of transational workloads
 - Use Case: **Most work loads**
@@ -80,7 +99,7 @@ Provides persistent block storage volumes for use with EC2 instances in the Clou
 - Volume Size: 1GiB - 16 TiB
 - Max IOPS/Volume: 16.000
 
-### Provisioned IOPS (SSD)
+#### Provisioned IOPS (SSD)
 
 - Description: Highest-performance SSD volume designed for mission-critical applications
 - Use Case: **Databases**
@@ -88,7 +107,7 @@ Provides persistent block storage volumes for use with EC2 instances in the Clou
 - Volume Size: 4 GiB - 16
 - Max IOPS/Volume: 64.000
 
-### Throughput Optimised Hard Disk Drive (HDD)
+#### Throughput Optimised Hard Disk Drive (HDD)
 
 - Description: Low cost HDD volume desined for frequently accessed, thoughput-intensive workloads
 - Use Case: **Big Data & Data Warehouses**
@@ -96,7 +115,7 @@ Provides persistent block storage volumes for use with EC2 instances in the Clou
 - Volume Size: 500 GiB - 16 TiB
 - Max IOPS/Volume: 500
 
-### Cold Hard Disk Drive (HDD)
+#### Cold Hard Disk Drive (HDD)
 
 - Description: Lowest cost HDD volume designed for less frequently accessed workloads
 - Use Case: **File Servers**
@@ -104,7 +123,7 @@ Provides persistent block storage volumes for use with EC2 instances in the Clou
 - Volume Size: 500 GiB - 16 TiB
 - Max IOPS/Volume: 250
 
-### Magnetic (HDD)
+#### Magnetic (HDD)
 
 - Description: Previuos generation HDD
 - Use Case: **Workloads where data is infrequently accessed**
