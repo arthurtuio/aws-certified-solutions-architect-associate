@@ -154,19 +154,77 @@ All AMI are categorized as either backed by Amazon EBS or backed by instance sto
 
 ### ENI - Elastic Network Interface
 
-Essentially a virtual network card.
+Essentially a virtual network card fro your EC2 instance, it allow:
+
+- A primaty private IPv4 address from the IPv4 address range of your VPC
+- One or more secondary private IPv4 addresses from the IPv4 address range of your VPC
+- One Elastic IP address (IPv4) pre private IPv4 address
+- One public IPv4 address
+- One or more IPv6 addresses
+- One or more security groups
+- A MAC address
+- A source/destination check flag
+- A description
+
+#### Senarios for Network Intervaces
+
+- Create a management network
+- Use network and secutiry appliances in your VPC
+- Create dual-homed instances with workloads/roles on distinct subnets
+- Create a low-budget, high-availabilit solution
 
 ### EN - Enhanced Networking
 
-Uses simple root I/O virtualization (SR-IOV) to provide high-performance networking capabilities on supported instance types
+Uses single root I/O virtualization (SR-IOV) to provide high-performance networking capabilities on supported instance types. SR-IOV is a method of device virtualization that provides higher I/O performance and lower CPU utilization when compared to tradicional virtualized network interfaces.
+
+Enhanced Networking provides higher bandwidth, higher packet per second (PPS) performance, and consistently lower inter-instance latencies. There is no additional charge for using enhanced networking, your EC2 instance just have to suport it.
+
+- **Use where you want good network performance**
+
+#### Enhanced Networking Methodology
+
+- **Elastic Network Adapter (ENA)**: which suports network speeds of up to 100 Gbps for supported instances types.
+
+- Intel 82599 **Virtual Function (VF)**: interface, which supports network speeds of up to 10 Gbps for supported instance types. This is typically used on older instances.
+
+  - In any scenario question, you probably want to **choose ENA over VF** if given the option.
 
 ### EFA - Elastic Fabric Adapter
 
-A network device that you can attach yo your AWS EC2 instance to accelarate High Performance Computing (HPC) and machine learning applications
+A network device that you can attach to your AWS EC2 instance to accelarate High Performance Computing (HPC) and machine learning applications. EFA provides lower and more consistent latency and higher throughput than the TCP transport traditionally used in cloud-based HPC systems. EFA can use OS-bypass, OS-bypass enables HPC and machine learning applications to bypass the operating system kernel and to communicate directly with the EFA device. It makes it a lot faster with a lot lower latency. Not supported with Windoes currently, only Linux.
+
+### Scenarios Useful
+
+#### ENI
+
+For basic networking. Perhaps you need a separate management network to you need a separatemanagement network to your production network or a separate logging network and you need to do this at low cost. In this scenario use multiple ENIs for each network
+
+#### EN(ENA or VF)
+
+For when you need speeds between 10Gbps and 100Gbps. Anywhere you need reliable, high throughput.
+
+#### EFA
+
+For when you need to accelarate High Performance Computing (HPC) and machine learning applications or if you need to do an OS by-pass. If you see a scenario question mentioning HPC or ML and asking what network adaptor you want, choose EFA.
+
+## Encrypted Root Device Volumes (by Snhapshot)
+
+-  Snapshots of encrypted volumes are encrypted automatically.
+- Volumes restored from encrypted snapshots are encrypted automatically.
+- You can share snapshots, but only if they are unecrypted
+- These snapshots can be shared with other AWS accounts or made public
+- You can now encrypt root device volumes upon creation of the EC2 instance
+
+### Processe to make a unecrypted root turn in encrypeted
+1. Create a snapshot of the unencrypted root device volume
+2. Create a copy of the snapshot and select the encrypt option
+3. Create an AMI from the encrypted snapshot
+4. Use AMI to lounch new encrypeted instances
 
 
+## EC2 Placement Groups
 
-
+## AWS WAF
 
 
 
