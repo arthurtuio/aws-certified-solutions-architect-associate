@@ -74,58 +74,44 @@ Provides persistent block storage volumes for use with EC2 instances in the Clou
 
 ### Gerenal Purpose (SSD)
 
-- Description: general pu
-- Use Case:
-- API Name:
-- Volume Size:
-- Max IOPS/Volume:
+- Description: general purpose SSd volume that balances price and performance for a wide variety of transational workloads
+- Use Case: **Most work loads**
+- API Name: gp2
+- Volume Size: 1GiB - 16 TiB
+- Max IOPS/Volume: 16.000
 
 ### Provisioned IOPS (SSD)
 
-- Description:
-- Use Case:
-- API Name:
-- Volume Size:
-- Max IOPS/Volume:
+- Description: Highest-performance SSD volume designed for mission-critical applications
+- Use Case: **Databases**
+- API Name: io1
+- Volume Size: 4 GiB - 16
+- Max IOPS/Volume: 64.000
 
 ### Throughput Optimised Hard Disk Drive (HDD)
 
-- Description:
-- Use Case:
-- API Name:
-- Volume Size:
-- Max IOPS/Volume:
+- Description: Low cost HDD volume desined for frequently accessed, thoughput-intensive workloads
+- Use Case: **Big Data & Data Warehouses**
+- API Name: st1
+- Volume Size: 500 GiB - 16 TiB
+- Max IOPS/Volume: 500
 
 ### Cold Hard Disk Drive (HDD)
 
-- Description:
-- Use Case:
-- API Name:
-- Volume Size:
-- Max IOPS/Volume:
+- Description: Lowest cost HDD volume designed for less frequently accessed workloads
+- Use Case: **File Servers**
+- API Name: sc1
+- Volume Size: 500 GiB - 16 TiB
+- Max IOPS/Volume: 250
 
 ### Magnetic (HDD)
 
-- Description:
-- Use Case:
-- API Name:
-- Volume Size:
-- Max IOPS/Volume:
+- Description: Previuos generation HDD
+- Use Case: **Workloads where data is infrequently accessed**
+- API Name: Standard
+- Volume Size: 1 GiB - 1 TiB
+- Max IOPS/Volume: 40-200
 
-Tipos de volume EBS:
-
-Uso geral SSD ( GP2 ), fornece equilíbrio entre perfomance e custo. Famoso custo-benefício.
-
-SDD IOPS provisionado, para aplicações que necessitam de alta perfomance, com aplicações intensas como grandes bancos relacionais ou não-relacionais.
-
-HDD ( ST1 ) rendimento otimizado, para uso de BigData, Data Warehouses, processamento de logs.
-Não pode ser utilizado como volume de boot.
-
-Cold HDD ( SC1 ) 
-Baixo custo de armazenamento, utilizado para contextos que não precisam acessar frequentemente o disco, como um servidor de arquivos.
-Não pode ser utilizado para boot.
-
-Volumes magnéticos, menor custo de armazenamento da categoria dos volumes bootaveis, ideal para para contextos onde os dados não são acessados frequentemente e aplicações onde o menor custo de armazenamento é importante.
 
 Resumo
 EC2 pricing
