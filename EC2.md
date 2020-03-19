@@ -131,6 +131,30 @@ Provides persistent block storage volumes for use with EC2 instances in the Clou
 - Volume Size: 1 GiB - 1 TiB
 - Max IOPS/Volume: 40-200
 
+## AMI Types (EBS vs Instance Stores)
+
+- Regions
+- Operating system
+- Architecture (32-bit or 64-bit)
+- Launch Permissions
+- Storage for the Root Device (Root Device Volume)
+  - Instance Store (EPHEMERAL STORAGE - cannot be stop, only reboot. fails=lose data)
+  - EBS Backed Volumes
+
+### EBS vs Instance Stores
+
+All AMI are categorized as either backed by Amazon EBS or backed by instance store.
+
+- **For EBS Volumes**: the root device for an instance launched from the AMI is an AMazon EBS volume created from an Amazon EBS snapshot.
+  - Can be stopped, you will not lose the data on thin instance
+- **For Instance Store Volumes**: the root device for an instance launched from the AMI is an instance store volume created from a template stored in AMazon S3.
+  - Cannot be stopped, if the underlying host fails, you will lose the data on thin instance
+
+ - **Similarity**
+  - You can reboot both, you will not lose your data
+  - By default, both ROOT volumes will be deletec on termination. However, with EBS volumes you can tell AWS to keep the root device volume.
+  
+
 
 Resumo
 EC2 pricing
