@@ -149,4 +149,32 @@ All AMI are categorized as either backed by Amazon EBS or backed by instance sto
  - **Similarity**
   - You can reboot both, you will not lose your data
   - By default, both ROOT volumes will be deletec on termination. However, with EBS volumes you can tell AWS to keep the root device volume.
-  
+
+## ENI vs ENA vs EFA
+
+### ENI - Elastic Network Interface
+
+Essentially a virtual network card.
+
+### EN - Enhanced Networking
+
+Uses simple root I/O virtualization (SR-IOV) to provide high-performance networking capabilities on supported instance types
+
+### EFA - Elastic Fabric Adapter
+
+A network device that you can attach yo your AWS EC2 instance to accelarate High Performance Computing (HPC) and machine learning applications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
