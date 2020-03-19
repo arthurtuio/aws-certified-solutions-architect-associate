@@ -221,18 +221,26 @@ For when you need to accelarate High Performance Computing (HPC) and machine lea
 3. Create an AMI from the encrypted snapshot
 4. Use AMI to lounch new encrypeted instances
 
+## CloudWatch
+
+## Working with EC2
+
+### AWS Command Line
+
+### Using IAM Roles
+
+### Ussing Boot Strap
+
+## EC2 Instance Meta Data
+
+## Elastic File System
+
+## FSX for Windows & FSX for Lustre
 
 ## EC2 Placement Groups
 
 ## AWS WAF
 
+# EC2 Summary
 
-
-
-
-
-
-
-
-
-
+## Quiz
