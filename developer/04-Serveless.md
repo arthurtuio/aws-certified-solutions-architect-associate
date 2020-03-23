@@ -135,6 +135,23 @@ Is a fully managed service that makes it easy for developers to publish, maintai
   - Can use custom domain
   - Now supports AWS Certificate Manager: free SSL/TLS certs.
 
+## Advanced API Gateway
+
+### Import API (Swagger 2.0 file)
+
+You can use the API Gateway Import API feature to import an API from an external definition file into API Gateway. Currently, the Import API feature supports Swagger v2.0 definitio files.
+With the Import API, you can either create a new API by submitting POST request that includes a Swagger definition in the payload and endpoint configuration or you can update an existing API by using PUT request that contains a Swagger definition in the payload. You can update an API by overwriting it with a new definition or merge a definition with an existing API. You specify the options using a mode query parameter in the request URL.
+
+### API Throttling
+
+- By default, API Gateway limits the steady-state request rate to 10.000 requests per second (rps)
+- The maximum concurrent request is 5.000 request across all APIs within an AWS account
+- If you go over 10.000 request per second or 5.000 concurrent request you will receive a HTTP 429 Too Many Request error response
+
+### SOAP Webservice Passthrough
+
+- You can configure API Gateway as a SOAP web service passthrough
+
 # API Caching
 
 You can enable API caching in Amazon API Gateway to cache your endpoints's response. With caching, you can reduce the number of call made to your endpoint and also improve the latency of the requests to your API. When you enable caching for a stage, API Gateway caches responses from your endpoint for a specified time-to-live (TTL) period, in seconds. API Gateway then responsds to the request by looking up the endpoint reponse from the cache instead of making a request to your endpoint.
