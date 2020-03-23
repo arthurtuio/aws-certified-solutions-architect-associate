@@ -46,7 +46,7 @@ Is a fully managed service that makes it easy for developers to publish, maintai
 - REST APIs (REpresentation State Transfer)
 - SOAP APIs (Simple Object Access Protocol)
 
-### What can API Gateway Do?
+## What can API Gateway Do?
 
 - Expose HTTPS endpoints to define a RESTful API
 - Serverless-ly connect to services like Lambda & Dynamo DB
@@ -56,5 +56,26 @@ Is a fully managed service that makes it easy for developers to publish, maintai
 - Track and control usage by API key
 - throttle requests to prevent attacks
 - Connect to CloudWatch to log all requests for monitoring
+- Maintain multiple versions of your API
 
+## Configure of API Gateway
 
+- Define an API (container)
+- Define resources and nested resources (URL paths)
+- For each resource:
+  - Select suported HTTP methos (verbs)
+  - Set security
+  - Choose target (such as EC@, Lambda, DynamoDB, etc)
+  - Set request and response transformations
+- Deploy API to a Stage
+  - Uses API Gateway domain, by default
+  - Can use custom domain
+  - Now supports AWS Certificate Manager: free SSL/TLS certs.
+
+# API Caching
+
+You can enable API caching in Amazon API Gateway to cache your endpoints's response. With caching, you can reduce the number of call made to your endpoint and also improve the latency of the requests to your API. When you enable caching for a stage, API Gateway caches responses from your endpoint for a specified time-to-live (TTL) period, in seconds. API Gateway then responsds to the request by looking up the endpoint reponse from the cache instead of making a request to your endpoint.
+
+# Same Oring Policy
+
+In computing, the same-origin policy
