@@ -62,6 +62,44 @@ Now you can update the code (the $LATEST version) with all of your improvements 
 
 Step Functions allows you to visualize and test your serverless applications. Step Functions provides a graphical console to arrange and visualize the components of your application as a series of steps. This makes it simple to build and run multistep applications. Step Functions automatically triggers and tracks each step and retries when there are errors, so your application executes in order and as expected. Step Functions logs the state of each step, so when things do go wrong, you can diagnose and debug problems quickly.
 
+- Great way to visualize your serverless application
+- Step Functions automatically triggers and tracks each step
+- Step Functions logs the state of each step so if something goes wrong and where
+
+# X-Ray
+
+AWS X-Ray is a service that collects data about request that your application serves and provides tools you use to view, filter and gain insights into that data to identify issues and opportunities for optimization. For any traced request to your application, you can see detailes information not only about the request and response, but also about calls that your application makes to downstream AWS resources, microservices, databases and HTTP web APIs.
+
+## X-Ray Architecture
+
+- You most have the X-ray SDK instold inside our application
+- Than it will send bits of json to X-Ray Deamon (install inside the pc)
+- The X-Ray Deamon send this json to X-Ray API
+- The X-Ray API storaged all this json and build the X-Ray Console visualization
+
+### X-Ray SDK
+
+- Interceptors to add to your code to trace incoming HTTP request
+- Client handlers to instrument AWS SDK clients that your application uses to call other AWS services
+- An HTTP client to use to instrument calls to other internal and external HTTP web services
+
+## X-Ray Integration
+
+- Elastic Load Balancing
+- AWS Lambda
+- Amazon API Gateway
+- Amazon Elastic Compute Cloud
+- Aws elastic Beanstalk
+
+### X-Ray Languages
+
+- Java
+- Go
+- Node.js
+- Python
+- Ruby
+- .NET
+
 # API Gateway
 
 Is a fully managed service that makes it easy for developers to publish, maintain, monitor and secure APIs at any scale. With a few clicks in the AWS Management Console, you can create an API that acts as a "front door" for applications to access data, business logic or functionality from your back-end services, such as applications running on Amazon Elastic Compute Cloud (Amazon EC2), code running on AWS or any web application
