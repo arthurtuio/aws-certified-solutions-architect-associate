@@ -58,6 +58,10 @@ Now you can update the code (the $LATEST version) with all of your improvements 
 - Lambda can do things globally, you can use it to back up S3 buckets to other buckets, etc.
 - Know your triggers
 
+# Step Functions
+
+Step Functions allows you to visualize and test your serverless applications. Step Functions provides a graphical console to arrange and visualize the components of your application as a series of steps. This makes it simple to build and run multistep applications. Step Functions automatically triggers and tracks each step and retries when there are errors, so your application executes in order and as expected. Step Functions logs the state of each step, so when things do go wrong, you can diagnose and debug problems quickly.
+
 # API Gateway
 
 Is a fully managed service that makes it easy for developers to publish, maintain, monitor and secure APIs at any scale. With a few clicks in the AWS Management Console, you can create an API that acts as a "front door" for applications to access data, business logic or functionality from your back-end services, such as applications running on Amazon Elastic Compute Cloud (Amazon EC2), code running on AWS or any web application
