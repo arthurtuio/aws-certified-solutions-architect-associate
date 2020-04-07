@@ -4,6 +4,15 @@
 
 <NO FINAL, Repassar os Tips > é o summary >
 
+< Duvidas nas perguntas >
+- É falado sobre RDS Reserved Instances aqui? Pq tem pergunta sobre
+- MySQL installation dafault to port number __ nao é falado
+- If you want your application to check RDS for an error, have it look for an ______ node in the response from the Amazon RDS API.
+- Under what circumstances would I choose provisioned IOPS over standard storage when creating an RDS instance?
+- If you are using Amazon RDS Provisioned IOPS storage with a Microsoft SQL Server database engine, what is the maximum size RDS volume you can have by default?
+- When you add a rule to an RDS DB security group, you must specify a port number or protocol.
+
+
 # Databases
 
 ## RDS
