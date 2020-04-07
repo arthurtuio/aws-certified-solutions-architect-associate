@@ -126,12 +126,16 @@ An on-demand, autoscaling config for the MySQL-compatible and Postgres-compatibl
 - Where to use? Simple, cost-effective option for infrequent, intermittend, or unpredictable workloads
 
 ## Elasticache
+A web service that makes it easy to deploy, operate, and scale an in-memory cache in the cloud. The service improves the performance of web applications by allowing you to retrieve infos from fast, managed, in-memory caches, instead of relying entirely on slower disk-based databases.
+- Used to increase database and web application performance
+- Supports 2 open source in memory caching engines:
+<printar a tabela>
 
 ### Memchached
 
 ### Redis
-> - You can share Aurora Snapshots with other AWS Accounts
-122
+- Multi AZ
+- You can do backups and restores of Redis
 
 # Summary
 - RDS - OLTP
