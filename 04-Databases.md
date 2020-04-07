@@ -2,7 +2,7 @@
 <eu falando da teoria, e alguem na pratica falando como é no nosso caso, vai ficar show de bola>
 <Claro, pedir pra me explicarem tbm pra eu adquirir esse conhecimento>
 
-<NO FINAL, Repassar os Tips>
+<NO FINAL, Repassar os Tips > é o summary >
 
 # Databases
 
@@ -75,11 +75,28 @@ Amazon NoSQL Database Solution (opposite as RDS)
 >> - Returns a result that reflects all writes that received a sucessful response prior to the read.
 
 ## Redshift
-A way to do BI or Data Warehousing in the cloud.
+A way to do BI or Data Warehousing in the cloud. *""Amazon Big Query""*
 - Fast and powerful, fully managed, petabytescale data warehouse service.
 - Customers can start small for just $.25/hour with no commitments or upfront costs and scale to a petabyte or more for $1k/terabyte.year, less than a 1/10 of most other data warehousing solutions.
-
-...
+- OLAP (Online Analytical Processing) - Lots of lots of data
+- Data Warehousing databases use different type of architecture both from a database perspective and infrastructure layer.
+- Can be configured as:
+> - Single Node (160 Gb)
+> - Multi-Node:
+>> - Leader Node (manages client conns and receives queries)
+>> - Compute Node (store data and perform queries and computations). Up to 128 Compute Nodes
+- Uses Advanced Compression (SERA QUE DESCREVO ISSO??????)
+- Massively Parallel Processing (MPP) (SERA QUE DESCREVO ISSO??????)
+- Backups:
+> - Enabled by default with a 1 day retention period.
+> - Max retention period is 35 days.
+> - Always attempts to maintain at least 3 copies of your data (the original and replica on the compute nodes and a backup in Amazon S3)
+> - Redshift can also asynchronously replicate your snapshots to S3 in another region for disaster recovery
+- Pricing is by Compute Node Hours (Total number of hours you run across all your compute nodes for the billing period). Not charged for leader node hours, only compute nodes.
+- Security: 
+> - Encrypted in transit using SSL
+> - Encrypted at rest using AES-256 encryption
+> - By default RedShift takes care of key management (but you can manage your own keys through HSM - hardware security module OR using KMS)
 - Availability: 
 > - Only in 1 AZ
 > - Can restore snapshots to new AZs in the event of an outage
