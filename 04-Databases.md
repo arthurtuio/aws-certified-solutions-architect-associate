@@ -1,3 +1,7 @@
+<perguntar pro pessoal do time quais ferramentas que eles usam, e aí ver se alguem topa cofacilitar isso comigo>
+<eu falando da teoria, e alguem na pratica falando como é no nosso caso, vai ficar show de bola>
+<Claro, pedir pra me explicarem tbm pra eu adquirir esse conhecimento>
+
 # Databases
 
 ## RDS
@@ -16,16 +20,48 @@ Database Snapshots:
 
 Whenever you restore either an Automatic Backup or a manual Snapshot, the restored version of the database will be a new RDS instance with a new DNS endpoint. 
 
-<carregar imagem aqui>
+<carregar imagem aqui dpepois que add ela no meu S3, ou drive, fodase>
 
+### Encryption at Rest
+- Supported by MySQL, Oracle, SQL Server, Postgres, MariaDB e Aurora. 
+- Encryption is done using the AWS Key Management Service (KMS). 
+- Once your RDS instance is encrypted, the data stored ar rest in the underlying storage is encrypted, as are its automated backups, read replicas, and snapshots.
 
 ### Multi-AZ
+- Allows you to have an exact copy of your production database in another AZ;
+- For Disaster Recovery only;
+- Not used for performance improvement (for that see Read Replicas);
+- AWS handles the replication for you, so when your production database is written to, this write will automatically be synchronized yo the stand by database; - you can just drink your coffee, nothing to concern
+- In the event of planned database maintenance, DB instance failure, or an availability zone failure, RDS vai automatically failover to the standby so that database operations can resume quickly without administrative intervention.
+- Available for:
+> - SQL server, Oracle, MySQL server, Postgres, MariaDB;
+> - Aurora is completely fault tolerant
+
+<mostrar a imagem pra depois ficar claro de comparar com as read replicas>
 
 ### Read Replicas
+- Allows you to have a read-only copy of your production database. This is achieved by using Asynchronous replication from the primary RDS instance of the read replica;
+- You can use read replicas for very read-heavy database workloads;
+- Used for scaling, not DR!
+- Must have automatic backups turned on in order to deploy a read reaplica;
+- You can have up to 5 read replica copies of any database;
+- You can have read replicas of read replicas (but watch out for latency);
+- Each read replica will have its own DNS end point;
+- You can have read replicas that have Multi AZ;
+- You can create read replicas of Multi AZ source databases;
+- Read replicas can be promoted to be their own databases. This breaks the replication;
+- You can have a read replica in a second region;
+- Available for: Oracle, MySQL server, Postgres, MariaDB, Aurora;
+- Not available for: SQL server - *At least on the time the course was done*. 
+
+
+
+<mostrar a imagem pra dpeois ficar claro a diferença pra multi AZ>
+
 
 ## DynamoDB
 
-## Redshitf
+## Redshift
 
 ## Aurora
 
