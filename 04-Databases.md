@@ -102,12 +102,36 @@ A way to do BI or Data Warehousing in the cloud. *""Amazon Big Query""*
 > - Can restore snapshots to new AZs in the event of an outage
 
 ## Aurora
+A MySQL and Postgres compatible relational database engine that combines the speed and availability of high-end commercial databases with the simplicity and cost-effectiveness of open source databases.
+- Provides up to 5x better performance than MySQL and 3x better than Postgres databases at a much lower price point, whilst delivering similar performance and availability
+- Starts with 10GB, Scales in 10GB increments to 64TB (Storage Autoscaling)
+- Compute resources can scale up to 32vCPUs and 244GB of memory
+- 2 copies of your data is contained in each AZ, with minimum of 3 AZs -> 6 copies of your data at least.
+- Scaling: 
+> - Aurora is designed to transparently handle the loss of up to 2 copies of the data without affecting database write availability and up to 3 copies without affecting read availability.
+> - Aurora storage is also self-healing. Data blocks and disks are continuosly scanned for errors and repaired automatically.
+- 3 types of replicas:
+> - Aurora replicas (currently 15 per database)
+> - MySQL Read Replicas (currently 5)
+> - Postgres Replicas (currently 1)
+<inserir imagens das tabelas>
+- Backups:
+> - Automated backups always enabled on Aurora. Backups do not impact database performance
+> - You can also take snapshots with Aurora. Also doesnt impact on performance
+> - You can share Aurora Snapshots with other AWS Accounts
+
+### Amazon Aurora Serverless
+An on-demand, autoscaling config for the MySQL-compatible and Postgres-compatible editions of Amazon Aurora. 
+- An Aurora serverless DB cluster automatically starts up, shuts down, and scales capacity up or down based on your app needs.
+- Where to use? Simple, cost-effective option for infrequent, intermittend, or unpredictable workloads
 
 ## Elasticache
 
 ### Memchached
 
 ### Redis
+> - You can share Aurora Snapshots with other AWS Accounts
+122
 
 # Summary
 - RDS - OLTP
