@@ -2,6 +2,8 @@
 <eu falando da teoria, e alguem na pratica falando como é no nosso caso, vai ficar show de bola>
 <Claro, pedir pra me explicarem tbm pra eu adquirir esse conhecimento>
 
+<NO FINAL, Repassar os Tips>
+
 # Databases
 
 ## RDS
@@ -58,7 +60,7 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 
 
 ## DynamoDB
-# Amazon NoSQL Database Solution (opposite as RDS)
+Amazon NoSQL Database Solution (opposite as RDS)
 - Fast and flexible NoSQL database service for all applications that need consistent, single-digit millisecond latency at any scale.
 - Fully managed database and supports both document and key-value data models.
 - Is flexible data model and reliable performance make it a great fit for mobile, web, gaming, ad-tech, IoT, and many other applications.
@@ -73,10 +75,14 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 >> - Returns a result that reflects all writes that received a sucessful response prior to the read.
 
 ## Redshift
-# A way to do BI or Data Warehousing in the cloud.
+A way to do BI or Data Warehousing in the cloud.
 - Fast and powerful, fully managed, petabytescale data warehouse service.
 - Customers can start small for just $.25/hour with no commitments or upfront costs and scale to a petabyte or more for $1k/terabyte.year, less than a 1/10 of most other data warehousing solutions.
 
+...
+- Availability: 
+> - Only in 1 AZ
+> - Can restore snapshots to new AZs in the event of an outage
 
 ## Aurora
 
@@ -87,3 +93,54 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 ### Redis
 
 # Summary
+- RDS - OLTP
+> - SQL, MySQL, Postgres, Oracle, Aurora, MariaDB
+> - Runs on virtual Machines
+> - Cant log in these operating systems (cant SSH)
+> - Patching of the RDS Operating System and DB is Amazon's responsability
+> - RDS is NOT serverless (Aurora IS)
+> - Automated Backups / Database Snapshots
+
+- DynamoDB - NoSQL
+> - Stored on SSD Storage
+> - Spread across 3 geographically distinct data centres
+> - Eventual Consistent Reads (Default) (1 sec) X Strongly Consistent Reads (<1 sec)
+
+- Redshift - OLAP
+> - BI/Datawarehousing
+> - 1 AZ
+> - Backups enabled by default to 1 day retention period, but can be up to 35 days.
+> - Always attempts to maintain at least 3 copies of your data (the original and replica on the compute nodes and a backup in Amazon S3)
+> - Redshift can also asynchronously replicate your snapshots to S3 in another region for disaster recovery
+
+- Aurora
+> - 2 copies of your data are contained in each AZ, with minimum of 3 AZs => 6 copies of your data
+> - 3 types of replicas available: Aurora replicas, MySQL replicas & Postgres replicas. Automated failover is only available for Aurora replicas
+> - Aurora has automated backups turned ON by default. You can also take snapshots with Aurora. 
+> - You can share Aurora Snapshots with other AWS accounts
+> - Use Aurora Serverless if you want a simple, cost-effective option for infrequent, intermittent, or unpredictable workloads.
+
+- Elasticache
+> - Use it to increase database and web application performance
+> - Memcached
+>> - Use it if you want to scale horizontally
+> - Redis
+>> - Multi AZ
+>> - Can do backups and restores
+
+- Read Replicas
+> - Multi AZ
+> - Performance
+> - Must have backups turned on.
+> - Can be in diff regions
+> - Can be MySQL, Postgres, MariaDB, Oracle, Aurora
+> - Can be promoted to master, however thiw will break the Read Replica 
+
+- Multi AZ
+> - Used For DR (Disaster recovery)
+> - You can force a failover from one AZ to another by rebooting the RDS instance
+
+- Encryption at rest
+> - Supported for MySQL, Oracle, SQL Server, Postgres, MariaDB & Aurora. 
+> - Done using Amazon KMS.
+> - Once your RDS instance is encrypted, the data stored is encrypted, as are its automated backups, read replicas and snapshots
