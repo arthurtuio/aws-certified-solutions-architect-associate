@@ -50,18 +50,33 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 - You can have read replicas that have Multi AZ;
 - You can create read replicas of Multi AZ source databases;
 - Read replicas can be promoted to be their own databases. This breaks the replication;
-- You can have a read replica in a second region;
+- You can have a read replica in a second region (diff from the original database).
 - Available for: Oracle, MySQL server, Postgres, MariaDB, Aurora;
 - Not available for: SQL server - *At least on the time the course was done*. 
-
-
 
 <mostrar a imagem pra dpeois ficar claro a diferença pra multi AZ>
 
 
 ## DynamoDB
+# Amazon NoSQL Database Solution (opposite as RDS)
+- Fast and flexible NoSQL database service for all applications that need consistent, single-digit millisecond latency at any scale.
+- Fully managed database and supports both document and key-value data models.
+- Is flexible data model and reliable performance make it a great fit for mobile, web, gaming, ad-tech, IoT, and many other applications.
+- Stored on SSD Storage (reason its so fast)
+- Spread across 3 geographically distinct data centres
+- Two types of read models (difference comes down to 1 second rule)
+> - Eventual Consistent Reads (Default)
+>> - Consistency across all copies of data is usually reached within 1 second. 
+>> - Repeating a read after a show time should return the updated data (Best Read performance)
+> - Strongly Consistent Reads
+>> - Used if you read the data in less than 1 sec. 
+>> - Returns a result that reflects all writes that received a sucessful response prior to the read.
 
 ## Redshift
+# A way to do BI or Data Warehousing in the cloud.
+- Fast and powerful, fully managed, petabytescale data warehouse service.
+- Customers can start small for just $.25/hour with no commitments or upfront costs and scale to a petabyte or more for $1k/terabyte.year, less than a 1/10 of most other data warehousing solutions.
+
 
 ## Aurora
 
