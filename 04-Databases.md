@@ -6,11 +6,9 @@
 
 < Duvidas nas perguntas >
 - É falado sobre RDS Reserved Instances aqui? Pq tem pergunta sobre
-- MySQL installation dafault to port number __ nao é falado
 - If you want your application to check RDS for an error, have it look for an ______ node in the response from the Amazon RDS API.
 - Under what circumstances would I choose provisioned IOPS over standard storage when creating an RDS instance?
 - If you are using Amazon RDS Provisioned IOPS storage with a Microsoft SQL Server database engine, what is the maximum size RDS volume you can have by default?
-- When you add a rule to an RDS DB security group, you must specify a port number or protocol.
 
 
 # Databases
@@ -106,6 +104,7 @@ A way to do BI or Data Warehousing in the cloud. *""Amazon Big Query""*
 > - Encrypted in transit using SSL
 > - Encrypted at rest using AES-256 encryption
 > - By default RedShift takes care of key management (but you can manage your own keys through HSM - hardware security module OR using KMS)
+> - When you add a rule to an RDS DB security group, you DON'T need to specify a port number or protocol.
 - Availability: 
 > - Only in 1 AZ
 > - Can restore snapshots to new AZs in the event of an outage
@@ -200,3 +199,6 @@ A web service that makes it easy to deploy, operate, and scale an in-memory cach
 > - Supported for MySQL, Oracle, SQL Server, Postgres, MariaDB & Aurora. 
 > - Done using Amazon KMS.
 > - Once your RDS instance is encrypted, the data stored is encrypted, as are its automated backups, read replicas and snapshots
+
+## Other tips
+- MySQL installation dafault to port number __ nao é falado
