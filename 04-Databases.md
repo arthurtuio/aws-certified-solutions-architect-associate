@@ -7,8 +7,6 @@
 < Duvidas nas perguntas >
 - É falado sobre RDS Reserved Instances aqui? Pq tem pergunta sobre
 - If you want your application to check RDS for an error, have it look for an ______ node in the response from the Amazon RDS API.
-- Under what circumstances would I choose provisioned IOPS over standard storage when creating an RDS instance?
-- If you are using Amazon RDS Provisioned IOPS storage with a Microsoft SQL Server database engine, what is the maximum size RDS volume you can have by default?
 
 
 # Databases
@@ -65,6 +63,19 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 
 ![read-replicas-image](/images/read-replicas.png)
 
+### Other important stuff about RDS
+- When creating an instance, can choose between:
+> - General Purpose (SSD) storage: suitable for a broad range of database workloads. Provides baseline of 3 IOPS/GiB and ability to burst to 3,000 IOPS.
+> - Provisioned IOPS (SSD) storage: 
+>> - suitable for I/O-intensive database workloads. Provides flexibility to provision I/O ranging from 1,000 to 30,000 IOPS. >> - Possible use-case: If you use online transaction processing in your production environment.
+>> - Maximum size RDS volume you can have by default: 16TB
+
+### RDS Lab
+- Creating an RDS instance
+- MySQL, Free tier
+- Settings
+- DB Instance Size
+
 
 ## DynamoDB
 Amazon NoSQL Database Solution (opposite as RDS)
@@ -99,7 +110,8 @@ A way to do BI or Data Warehousing in the cloud. *""Amazon Big Query""*
 > - Max retention period is 35 days.
 > - Always attempts to maintain at least 3 copies of your data (the original and replica on the compute nodes and a backup in Amazon S3)
 > - Redshift can also asynchronously replicate your snapshots to S3 in another region for disaster recovery
-- Pricing is by Compute Node Hours (Total number of hours you run across all your compute nodes for the billing period). Not charged for leader node hours, only compute nodes.
+- Pricing:
+> - by Compute Node Hours (Total number of hours you run across all your compute nodes for the billing period). Not charged for leader node hours, only compute nodes.
 - Security: 
 > - Encrypted in transit using SSL
 > - Encrypted at rest using AES-256 encryption
