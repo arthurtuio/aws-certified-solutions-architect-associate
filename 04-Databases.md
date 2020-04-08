@@ -88,6 +88,10 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 > - Aditional Configuration
 >> - Initial DB name
 >> - Backup options
+>> - Maintence
+>> - Termination protection
+> - Takes a while to create
+- Creating a EC2 instance
 
 
 ## DynamoDB
