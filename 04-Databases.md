@@ -31,7 +31,7 @@ Database Snapshots:
 
 Whenever you restore either an Automatic Backup or a manual Snapshot, the restored version of the database will be a new RDS instance with a new DNS endpoint. 
 
-<carregar imagem aqui dpepois que add ela no meu S3, ou drive, fodase>
+![backup-image](/images/rds-backups.png)
 
 ### Encryption at Rest
 - Supported by MySQL, Oracle, SQL Server, Postgres, MariaDB e Aurora. 
