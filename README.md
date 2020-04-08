@@ -27,7 +27,7 @@ Andy Jassy : "Invention requires two thins 1. the ability to try a lot of experi
 
 ## AWS Console
 
-![image](/aws-services.webp)
+![image](https://drive.google.com/open?id=1gwy_6DBWl5t4X9AXHmTpCvONmgC-mIyd)
 
 ### Availability Zones (1+DataCenter)
 
