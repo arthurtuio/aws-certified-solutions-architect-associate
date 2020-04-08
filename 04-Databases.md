@@ -69,12 +69,22 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 > - Provisioned IOPS (SSD) storage: 
 >> - suitable for I/O-intensive database workloads. Provides flexibility to provision I/O ranging from 1,000 to 30,000 IOPS. >> - Possible use-case: If you use online transaction processing in your production environment.
 >> - Maximum size RDS volume you can have by default: 16TB
+>> - My SQL default TCP/IP port is 3306 (used for connections).
 
 ### RDS Lab
 - Creating an RDS instance
-- MySQL, Free tier
-- Settings
-- DB Instance Size
+> - MySQL, Free tier
+> - Settings
+> - DB Instance Size
+> - Storage
+> - Availability & durability
+> - Connectivity 
+>> - *Question: Here is where we set we (Jarvis team) can acess the Bridge?*
+>> - *Question: Choosing the AZ here already can impact in the our RDS cost?*
+> - Database Autentication
+> - Aditional Configuration
+>> - Initial DB name
+>> - Backup options
 
 
 ## DynamoDB
@@ -213,4 +223,3 @@ A web service that makes it easy to deploy, operate, and scale an in-memory cach
 > - Once your RDS instance is encrypted, the data stored is encrypted, as are its automated backups, read replicas and snapshots
 
 ## Other tips
-- MySQL installation dafault to port number __ nao é falado
