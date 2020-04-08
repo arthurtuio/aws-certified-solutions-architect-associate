@@ -44,7 +44,7 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 - Used for scaling, not DR!
 - Must have automatic backups turned on in order to deploy a read reaplica;
 - You can have up to 5 read replica copies of any database;
-- You can have read replicas of read replicas (but watch out for latency);
+- You can have read replicas of read replicas (but watch out for latency) (and depends of the DB - Postgres cant, MySQL can)
 - Each read replica will have its own DNS end point;
 - You can have read replicas that have Multi AZ;
 - You can create read replicas of Multi AZ source databases;
@@ -242,4 +242,4 @@ A web service that makes it easy to deploy, operate, and scale an in-memory cach
 
 ## Other tips
 - RDS Reserved instances are available for multi-AZ deployments.
-- If you want your application to check RDS for an error, have it look for an INCORRECT node in the response from the Amazon RDS API.
+- If you want your application to check RDS for an error, have it look for an ERROR node in the response from the Amazon RDS API.
