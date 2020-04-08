@@ -1,14 +1,3 @@
-<perguntar pro pessoal do time quais ferramentas que eles usam, e aí ver se alguem topa cofacilitar isso comigo>
-<eu falando da teoria, e alguem na pratica falando como é no nosso caso, vai ficar show de bola>
-<Claro, pedir pra me explicarem tbm pra eu adquirir esse conhecimento>
-
-<NO FINAL, Repassar os Tips > é o summary >
-
-< Duvidas nas perguntas >
-- É falado sobre RDS Reserved Instances aqui? Pq tem pergunta sobre
-- If you want your application to check RDS for an error, have it look for an ______ node in the response from the Amazon RDS API.
-
-
 # Databases
 
 ## RDS
@@ -252,3 +241,5 @@ A web service that makes it easy to deploy, operate, and scale an in-memory cach
 > - Once your RDS instance is encrypted, the data stored is encrypted, as are its automated backups, read replicas and snapshots
 
 ## Other tips
+- RDS Reserved instances are available for multi-AZ deployments.
+- If you want your application to check RDS for an error, have it look for an INCORRECT node in the response from the Amazon RDS API.
