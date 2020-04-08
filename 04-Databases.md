@@ -48,7 +48,7 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 > - SQL server, Oracle, MySQL server, Postgres, MariaDB;
 > - Aurora is completely fault tolerant
 
-<mostrar a imagem pra depois ficar claro de comparar com as read replicas>
+![multi-az-image](/images/multi-az.png)
 
 ### Read Replicas
 - Allows you to have a read-only copy of your production database. This is achieved by using Asynchronous replication from the primary RDS instance of the read replica;
@@ -65,7 +65,7 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 - Available for: Oracle, MySQL server, Postgres, MariaDB, Aurora;
 - Not available for: SQL server - *At least on the time the course was done*. 
 
-<mostrar a imagem pra dpeois ficar claro a diferença pra multi AZ>
+![read-replicas-image](/images/read-replicas.png)
 
 
 ## DynamoDB
