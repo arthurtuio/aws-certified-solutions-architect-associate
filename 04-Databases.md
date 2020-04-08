@@ -67,6 +67,8 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 ![read-replicas-image](/images/read-replicas.png)
 
 ### Other important stuff about RDS
+- RDS runs on virtual machines, and you CANT log in (SSH) into these operating systems. Thats why patching on RDS is Amazon's Responsibilty
+- RDS is not serverless (only Aurora IS)
 - When creating an instance, can choose between:
 > - General Purpose (SSD) storage: suitable for a broad range of database workloads. Provides baseline of 3 IOPS/GiB and ability to burst to 3,000 IOPS.
 > - Provisioned IOPS (SSD) storage: 
@@ -91,7 +93,24 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 >> - Maintence
 >> - Termination protection
 > - Takes a while to create
+*the shared presentation content goes up to here. If anyone wants to see an integration with EC2, just message me or see the lab on Udemy*
 - Creating a EC2 instance
+> - pass a bootstrap script
+> - Used as security group 'WebDMZ', for example
+> - Added an inbound rule to rds-launch-wizard, to communicate with the WebDMZ
+> - Check if the instance is running
+- Backing to RDS
+> - Database created :)
+> - After selecting the created db, field monitoring is cloudwatch metrics 
+> - on connectitivy field, the endpoint there is what we need
+> - Back to EC2, just paste the instance public IP adress in a new tab, and then fill the database fields with what we created. 
+> - You will see a error message, because first its necessary to run on SSH into the EC2 instance.
+
+### RDS Backups, Multi-AZ & Read-Replicas Lab
+- On RDS, on the database, its possible to:
+> - By clicking in the button actions (canto sup diretito), theres some things you can do
+> - By clicking in modify, its possible to do a lot of stuff to
+>> - Modify to multi AZ (it takes some time) -> see in configurations
 
 
 ## DynamoDB
