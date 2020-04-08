@@ -94,7 +94,7 @@ A way to do BI or Data Warehousing in the cloud. *""Amazon Big Query""*
 > - Multi-Node:
 >> - Leader Node (manages client conns and receives queries)
 >> - Compute Node (store data and perform queries and computations). Up to 128 Compute Nodes
-- Uses Advanced Compression (SERA QUE DESCREVO ISSO??????)
+- Uses Advanced Compression (Redshift employs multiple compression techniques, and because doesn't require indexes or materialized views, uses less space than tradicional relational database systems)
 - Massively Parallel Processing (MPP) (SERA QUE DESCREVO ISSO??????)
 - Backups:
 > - Enabled by default with a 1 day retention period.
