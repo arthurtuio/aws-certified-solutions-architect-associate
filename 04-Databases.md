@@ -14,7 +14,7 @@
 ## RDS
 Amazon Relational Database Service is a web service that makes it easier to set up, operate, and scale a relational database in the AWS Cloud. It provides cost-efficient, resizable capacity for an industry-standard relational database and manages common database administration tasks.
 
-*Tip: Our Bridge is a RDS*
+*Tip: Our Bridge is a RDS, and each squad on CA has its own RDS*
 
 ### Backups
 Automated Backups:
@@ -111,6 +111,9 @@ Whenever you restore either an Automatic Backup or a manual Snapshot, the restor
 > - By clicking in the button actions (canto sup diretito), theres some things you can do
 > - By clicking in modify, its possible to do a lot of stuff to
 >> - Modify to multi AZ (it takes some time) -> see in configurations
+>> - Can also turn Read Replicas, but first the backup must be on
+> - Clicking in read replica, it creates as a new db (with new DNS)
+>> - and with that, you can promote, etc
 
 
 ## DynamoDB
