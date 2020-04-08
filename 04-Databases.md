@@ -138,9 +138,11 @@ An on-demand, autoscaling config for the MySQL-compatible and Postgres-compatibl
 A web service that makes it easy to deploy, operate, and scale an in-memory cache in the cloud. The service improves the performance of web applications by allowing you to retrieve infos from fast, managed, in-memory caches, instead of relying entirely on slower disk-based databases.
 - Used to increase database and web application performance
 - Supports 2 open source in memory caching engines:
-<printar a tabela>
+
+![elasticache](/images/elasticache.png)
 
 ### Memchached
+- Used for horizontally scaling.
 
 ### Redis
 - Multi AZ
